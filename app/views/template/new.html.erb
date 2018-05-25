@@ -1,0 +1,63 @@
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Ziuzzu Instagram</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-3">
+
+          <h1 class="my-4">Ziuzzugram</h1>
+          <div class="list-group">
+          </div>
+
+            <form action='/template/new' method='post'>
+            <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+            
+            <div class="form-group">
+            <label for="exampleInputEmail1">Title</label>
+            <input type='text' name='post_title' value=<%= @post.title %>>
+            </div>
+            </div>
+             
+            <div class="form-group">
+            <label for="exampleFormControlTextarea1">Content</label>
+            <textarea name ="post_content"><%= @post.content %></textarea> 
+            </div>
+             
+            <input type='submit' value='submit'>
+            </form>
+
+
+        </div>
+        <!-- /.col-lg-3 -->
+
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/bootstrap.bundle.min.js"></script>
+
+  </body>
